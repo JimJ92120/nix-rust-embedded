@@ -1,6 +1,6 @@
-# embedded-toolchains
+# nix-rust-embedded
 
-Toolchains boilerplates for different systems and architecture.
+Toolchains and environments for embedded development with `rust` and `nix`.
 
 ---
 
