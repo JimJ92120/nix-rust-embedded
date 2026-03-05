@@ -1,7 +1,7 @@
 /* https://github.com/bztsrc/raspi3-tutorial/blob/master/03_uart1/link.ld */
 SECTIONS
 {
-    . = 0x80000;
+    . = 0x8000;
     .text : { KEEP(*(.text.boot)) *(.text .text.* .gnu.linkonce.t*) }
     .rodata : { *(.rodata .rodata.* .gnu.linkonce.r*) }
     PROVIDE(_data = .);
