@@ -46,6 +46,8 @@ arm-none-eabi-objcopy -O binary target/armv7a-none-eabi/release/arm-none build/k
 
 # qemu
 qemu-system-arm -M raspi2b -kernel build/kernel7.img -serial null -serial stdio -display none
+# log output in `serial.log` file
+qemu-system-arm -M raspi2b -kernel build/kernel7.img -serial stdio -serial file:serial.log -display none
 ```
 
 ### qemu

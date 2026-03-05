@@ -45,8 +45,9 @@ aarch64-none-elf-objdump -d -D target/aarch64-unknown-none/release/aarch64-none 
 aarch64-none-elf-objcopy -O binary target/aarch64-unknown-none/release/aarch64-none build/kernel8.img
 
 # qemu
-qemu-system-aarch64 -M help | grep raspi
 qemu-system-aarch64 -M raspi3b -kernel build/kernel8.img -serial null -serial stdio -display none
+# log output in `serial.log` file
+qemu-system-aarch64 -M raspi3b -kernel build/kernel8.img -serial stdio -serial file:serial.log  -display none
 ```
 
 ### qemu
